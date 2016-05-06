@@ -12,6 +12,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+
 html {
     color: #222;
     font-size: 1em;
@@ -94,17 +95,186 @@ textarea {
 }
 
 /* ==========================================================================
+   Pinterest Prototype - Style Guide
+   ========================================================================== */
+
+/*COLORS:
+Pin field and search bar background = #E9E9E9
+Box shadow = #D8D8D8
+Dark grey = #717171
+Search / sub text grey = #b0b0b0
+Like / Send / Save = #EFEFEF
+Like / Send / Save hover = #E0E0E0
+Brand red = #B80F16
+"Buy it" blue = #0682FF
+"But it" blue hover = #0575e5
+White = #FFFFFF
+Black = #000000*/
+
+/*FONTS: 
+Pin board header = 36px bold
+Username and search infield label = 16px bold
+Pin paragraph = 13px regular*/
+
+/* ==========================================================================
    Pinterest Prototype - Main Styles
    ========================================================================== */
 
+/*General Pinterest Styles*/
+/*===========================================================================*/
+* {
+    box-sizing: border-box;
+    color: #717171;
+    font-size: 12px;
+    font-family: 'Arimo';
+    /*border: solid red;*/
+}
 
+html {
+    background-color: #E9E9E9;
+}
 
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
 
+/*Main Nav Styles*/
+/*===========================================================================*/
+/*need to center horizontally*/
+.mainNav {
+    background-color: #FFFFFF;
+    box-shadow:;
+    max-width: 100%;
+    height: 54px;
+    box-shadow: 0px 2px 2px #D8D8D8;
+    z-index: 200;
+    background-color: white;
+    position: relative;
+    padding: 10px;
+    
+}
 
+.navInputsLeft {
+    border: 1px solid #D8D8D8;
+    float: left;
+    height: 33px;
+    border-radius: 6px;
+    display: inline-block;
+    text-align: center;
+}   
 
+.navInputsRight {
+    border: 1px solid #D8D8D8;
+    float: left;
+    height: 33px;
+    border-radius: 6px; 
+    text-align: center;
+}
 
+#search {
+    height: 31px;
+    background-color: #E9E9E9;
+    font-weight: bold;
+    font-size: 16px;
+    color: #b0b0b0;
+    border: 1px #D8D8D8;
+}
 
+/*need to center horizontally*/
+.checkout {
+    background-color: white;
+    max-width: 100%;
+    height: 65px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    box-shadow: 0px 2px 2px #D8D8D8;
+    z-index: 150;
+    padding: 16px;
+}
 
+fieldset {
+    width: 30%;
+    height: 400px;
+    background-color: white;
+    display: inline-block;
+    margin: 50px 20px 20px 20px;
+    padding: 30px;
+    float: left;
+    box-shadow: 0px 2px 2px #D8D8D8; 
+    border-top: 4px solid #717171; 
+    border-radius: 0 0 10px 10px;
+}
+
+legend {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding: 0 0 40px 0;
+}
+
+.formTitle {
+
+}
+
+label {
+    color: #b0b0b0;
+    font-size: 10px;
+    float: left;
+}
+
+/*set px size on grid to avoid moving around. use postion class learnings*/
+input {
+    border: none;
+    border-bottom: 1px solid #b0b0b0;
+    height: 20px;
+    padding: 5px 0 2px 5px;
+    float: left;
+    margin: 0 5px 0 0;
+}
+
+/*input:focus ~ label {
+    background-color: red;
+}*/
+
+img {
+    width: 80px;
+}
+
+p .policy {
+    float: left;
+}
+
+/*Button Styles*/
+/*===========================================================================*/
+#formButton {
+    border: none;
+    background-color: #EFEFEF; 
+    font-weight: bold;
+    width: 100%;
+    height: 35px;
+    border-radius: 6px;
+}
+
+#formButton:hover {
+    background-color: #E0E0E0;
+} 
+
+#submitButton {
+    border: none;
+    background-color: #0682FF;
+    color: white;
+    width: 100%;
+    height: 35px;
+    border-radius: 6px;
+}
+
+#submitButton:hover {
+    background-color: #0575e5;
+}
 
 /* ==========================================================================
    Pinterest Prototype - Responsive Styles

@@ -9,7 +9,7 @@
 // ============================================
 
 // Hide input labels
-
+$('label').hide();
 // Hide Submit button
 
 // ============================================
@@ -17,7 +17,9 @@
 // ============================================
 
 // On click:
+$(this).on('click', function () {
 	// Show label
+	$('label').show();
 	// Hide placeholder text
 	// AddClass .highlight in CSS
 		// if no text in input then 
@@ -26,6 +28,7 @@
 
 // if click other field or tab then
 	// hideClass .highlight in CSS
+});
 
 // ============================================
 // Shipping Form

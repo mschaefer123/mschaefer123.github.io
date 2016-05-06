@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Pinterest &#x02022 Checkout</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Pages -->
+    <link rel="confirm" href="confirm.html">
+    <!-- Fonts -->
+    <!-- Google Font equivalent for Helvetica Neue  -->
+    <link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -24,17 +29,21 @@
     <!-- Pinterest e-comm prototype content -->
 
     <!-- TOP BAR -->
-    <header class="searchbar">
-        <!-- Home button -->
-        <button type='button' id='home'><!-- logo icon image src --></button>
-        <!-- Search bar input -->
-         <input type='text' name='search' id='search' placeholder='Search'>
-        <!-- Hamburger button -->
-        <button type='button' id='hamburger'><!-- hamburger icon image src --></button>
-        <!-- Profile button -->
-        <button type='button' id='profile'><!-- profile icon image src --> Username</button>
-        <!-- Notification button -->
-        <button type='button' id='notification'><!-- settings icon image src --></button>
+    <header class="mainNav">
+        <div class='navInputsLeft'>
+            <!-- Home button -->
+            <button type='button' id='home'><!-- logo icon image src --></button>
+            <!-- Search bar input -->
+            <input type='text' name='search' id='search' placeholder='Search'>
+            <!-- Hamburger button -->
+            <button type='button' id='hamburger'><!-- hamburger icon image src --></button>
+        </div>
+        <div class='navInputsRight'>
+            <!-- Profile button -->
+            <button type='button' id='profile'><!-- profile icon image src --> Username</button>
+            <!-- Notification button -->
+            <button type='button' id='notification'><!-- settings icon image src --></button>
+        </div>
     </header>
 
     <!-- CHECKOUT TITLE -->
@@ -42,14 +51,18 @@
 
     <!-- CHECKOUT FORMS -->
     <form action="">
+    <span><legend>1. Shipping</legend></span>
     <!-- SHIPPING FORM -->
     <fieldset class='shipping'>
-        <legend>1. Shipping</legend>
+        
     <!-- Display .shippingInputs class when user ticks shippingCheckbox -->
         <!-- create class shippingInputs  -->
         <!-- First name input -->
-        <label for='firstName'>First name</label>
-        <input type='text' name='firstName' id='firstName' placeholder='First name'>
+        <div>
+            <label for='firstName'>First name</label>
+            <input type='text' name='firstName' id='firstName' placeholder='First name'>
+        </div>
+
         <!-- Last name input -->
         <label for='lastName'>Last name</label>
         <input type='text' name='lastName' id='lastName' placeholder='Last name'>
@@ -76,11 +89,11 @@
         <label for='phoneNumber'>Phone number</label>
         <input type='text' name='phoneNumber' id='phoneNumber' placeholder='Phone number'>
         <!-- Privacy policy paragraph -->
-        <p>Braun will use this info to confirm your order and shipping.<strong>We'll store your payment info so you can use it again. Learn more at our privacy policy.</strong></p>
+        <p class='policy'>Braun will use this info to confirm your order and shipping.<strong>We'll store your payment info so you can use it again. Learn more at our privacy policy.</strong></p>
         <!-- Save Shipping button -->
     <!-- in JS toggle "Edit Shipping" when when button is clicked -->
     <!-- in JS side up shipping fieldset, hide input box styling / privacy policy, and add checkmark  -->
-        <button type='button'>Save Shipping</button>
+        <button type='button' id='formButton'>Save Shipping</button>
     </fieldset>
         
     <!-- PAYMENT FORM -->
@@ -130,11 +143,11 @@
         <input type='text' name='zip' id='zip' placeholder='Zip'>
         
         <!-- Privacy policy paragraph -->
-        <p>Braun will use this info to confirm your order and shipping.<strong>We'll store your payment info so you can use it again. Learn more at our privacy policy.</strong></p>
+        <p class='policy'>Braun will use this info to confirm your order and shipping.<strong>We'll store your payment info so you can use it again. Learn more at our privacy policy.</strong></p>
         <!-- Save Payment button -->
     <!-- in JS toggle "Edit Payment" when when button is clicked -->
     <!-- in JS slide up Payment fieldset, hide input box styling / privacy policy, and add checkmark -->
-        <button type='button'>Save Payment</button>
+        <button type='button' id='formButton'>Save Payment</button>
     </fieldset>
         
     <!-- REVIEW FORM -->
@@ -186,7 +199,7 @@
         <!-- Place Order -->
     <!-- hide on page load, use JS to show button when both shipping and payment buttons clicked -->
     <!-- add link to confirm.html -->
-        <button type='button'>Place Order</button> 
+        <button type='button' id='submitButton'>Place Order</button> 
     </fieldset> 
     </form>
 
