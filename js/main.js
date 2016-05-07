@@ -9,7 +9,7 @@
 // ============================================
 
 // Hide input labels
-$('label').hide();
+// $('label').hide();
 // Hide Submit button
 
 // ============================================
@@ -71,5 +71,5 @@ $(this).on('click', function () {
 
 // Add .quantity, estimated tax, and shipping and display total # in Total column
 
-// Display user input for first and last name from shipping fieldset
+// Store user inputs (First name, Last name, Address 1, City, State, Zip) from shipping form into var and display text results in review form
 

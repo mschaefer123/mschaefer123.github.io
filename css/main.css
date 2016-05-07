@@ -153,7 +153,6 @@ html {
     background-color: white;
     position: relative;
     padding: 10px;
-    
 }
 
 .navInputsLeft {
@@ -163,7 +162,7 @@ html {
     border-radius: 6px;
     display: inline-block;
     text-align: center;
-    margin-right: 30px;
+    margin: 0 15px 0 30px;
 }   
 
 .navInputsRight {
@@ -176,12 +175,17 @@ html {
 
 #search {
     height: 31px;
-    width: 650px;
+    width: 850px;
     background-color: #E9E9E9;
     font-size: 16px;
     color: #b0b0b0;
     border: 1px #D8D8D8;
     padding: 0 0 0 20px;
+    margin: 0;
+}
+
+#search:focus {
+    outline: none;
 }
 
 .homeButton {
@@ -189,24 +193,96 @@ html {
     width: 40px;
     margin: 0;
     float: left;
-    
+    background: linear-gradient(to bottom, #FFFFFF, #F6F6F6);
+    border-radius: 6px 0 0 6px;
+    border-right: 1px solid #D8D8D8;
+}
+
+.homeButton:hover {
+    background: linear-gradient(to bottom, #FFFFFF, #EFEFEF);
+}
+
+.homeButton img {
+    position: relative;
+    width: 30px;
 }
 
 .hamburger {
     height: 31px;
     width: 40px;
     float: left;
+    margin: 0;
+    padding: 7px 10px 5px 10px;
     position: relative;
+    background: linear-gradient(to bottom, #FFFFFF, #F6F6F6);
+    border-radius: 0 6px 6px 0;
+    border-left: 1px solid #D8D8D8;
 }
 
-#profile {
+.hamburger:hover {
+    background: linear-gradient(to bottom, #FFFFFF, #EFEFEF);
+}
+
+.hamburger img {
+    position: relative;
+    width: 20px;
+    padding-top: 10px
+    margin: 0;
+}
+
+.profile {
     height: 31px;
-    width: 164px;
+    width: 190px;
+    float: left;
+    margin: 0;
+    padding: 5px 5px 5px 8px;
+    position: relative;
+    background: linear-gradient(to bottom, #FFFFFF, #F6F6F6);
+    border-radius: 6px 0 0 6px ;
 }
 
-#notification {
+.profile:hover {
+    background: linear-gradient(to bottom, #FFFFFF, #EFEFEF);
+}
+
+.profile img {
+    position: relative;
+    width: 20px;
+    float: left;
+    margin: 0;
+}
+
+.profile p {
+    font-size: 16px;
+    color: #818181;
+    font-weight: bold; 
+    margin: 0;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.notification {
     height: 31px;
     width: 40px;
+    float: left;
+    margin: 0;
+    padding: 5px 10px 5px 10px;
+    position: relative;
+    background: linear-gradient(to bottom, #FFFFFF, #F6F6F6);
+    border-radius: 0 6px 6px 0;
+    border-left: 1px solid #D8D8D8;
+}
+
+.notification:hover {
+    background: linear-gradient(to bottom, #FFFFFF, #EFEFEF);
+}
+
+.notification img {
+    position: relative;
+    width: 20px;
+    float: left;
+    padding-top: 10px
+    margin: 0;
 }
 
 .checkout {
@@ -235,6 +311,7 @@ fieldset {
     box-shadow: 0px 2px 2px #D8D8D8; 
     border-top: 4px solid #717171; 
     border-radius: 0 0 10px 10px;
+    position: relative;
 }
 
 .formTitle {
@@ -263,9 +340,13 @@ input {
     margin: 0 5px 0 0;
 }
 
-/*input:focus ~ label {
-    background-color: red;
+/*Show label without JS?*/
+/*input:focus ~ label {    
 }*/
+
+input:focus {
+    outline: none;
+}
 
 img {
     width: 80px;
