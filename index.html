@@ -32,11 +32,11 @@
     <header class="mainNav">
         <div class='navInputsLeft'>
             <!-- Home button -->
-            <button type='button' id='home'><!-- logo icon image src --></button>
+            <p class='homeButton' img='img/Logo.png'></p>
             <!-- Search bar input -->
             <input type='text' name='search' id='search' placeholder='Search'>
             <!-- Hamburger button -->
-            <button type='button' id='hamburger'><!-- hamburger icon image src --></button>
+            <p class='hamburger' img='img/Logo.png'></p>
         </div>
         <div class='navInputsRight'>
             <!-- Profile button -->
@@ -51,9 +51,10 @@
 
     <!-- CHECKOUT FORMS -->
     <form action="">
-    <span><legend>1. Shipping</legend></span>
+    
     <!-- SHIPPING FORM -->
     <fieldset class='shipping'>
+    <p class='formTitle'>1. Shipping</p>
         
     <!-- Display .shippingInputs class when user ticks shippingCheckbox -->
         <!-- create class shippingInputs  -->
@@ -98,7 +99,7 @@
         
     <!-- PAYMENT FORM -->
     <fieldset class='payment'>
-        <legend>2. Payment</legend>
+    <p class='formTitle'>2. Payment</p>
         <!-- First name input for card-->
         <label for='firstNameCard'>First name</label>
         <input type='text' name='firstNameCard' id='firstNameCard' placeholder='First name'>
@@ -152,7 +153,7 @@
         
     <!-- REVIEW FORM -->
     <fieldset class='review'>
-        <legend>3. Review</legend>
+    <p class='formTitle'>3. Review</p>
         <!-- product info div -->
         <div class='productInfo'>
         <image src ='img/Braun_BN0024.jpg'>
