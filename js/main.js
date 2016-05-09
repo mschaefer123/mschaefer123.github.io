@@ -9,19 +9,24 @@
 // ============================================
 
 // Hide input labels
-// $('label').hide();
+$('label').addClass('hiddenLabel');
 // Hide Submit button
 
 // ============================================
 // Input Functions
 // ============================================
 
-// On click:
-$(this).on('click', function () {
+// On click show and highlight label:
+$('input').on('click', function () {
 	// Show label
-	$('label').show();
+	$('label').removeClass('hiddenLabel');
 	// Hide placeholder text
-	// AddClass .highlight in CSS
+
+	// addClass .highlightLabel in CC
+	$('label').addClass('highlightLabel');
+
+	// AddClass .highlightInput in CSS
+	$('input').addClass('highlightInput');
 		// if no text in input then 
 			// hide label
 			// show placeholder text
@@ -30,18 +35,32 @@ $(this).on('click', function () {
 	// hideClass .highlight in CSS
 });
 
+// hide the placeholder when click and show when off
+$(function(){
+    $('input').data('holder',$('input').attr('placeholder'));
+    $('input').focusin(function(){
+        $(this).attr('placeholder','');
+    });
+    $('input').focusout(function(){
+        $(this).attr('placeholder',$(this).data('holder'));
+    });
+})
+
 // ============================================
 // Shipping Form
 // ============================================
 
 // on "Save Shipping" button click: 
+	$('#shippingButton').on('click', function () {
+	// How to toggle?
 	// Change button text to "Edit Shipping" 
+	$('#shippingButton').html('Edit Shipping');
 	// SlideUp shipping fieldset:
 		// Hide input box styling
 		// Hide privacy policy text
 		// Add checkmark icon to top right of feildset
 		// Add first and last name, Address 1, City, State, Zip user input text to Review Form
-
+});
 // ============================================
 // Payment Form
 // ============================================
@@ -49,11 +68,15 @@ $(this).on('click', function () {
 // Hide class .billingInputs and display .shippingInputs class (user input from shipping inputs) when user ticks .shippingCheckbox
 
 // on "Save Payment" button click: 
+	$('#paymentButton').on('click', function () {
+	// How to toggle?
 	// Change button text to "Edit Payment" 
+	$('#paymentButton').html('Edit Payment');
 	// SlideUp payment fieldset:
 		// Hide input box styling
 		// Hide privacy policy text
 		// Add checkmark icon to top right of feildset
+});
 
 // ============================================
 // Review Form

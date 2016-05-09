@@ -29,6 +29,7 @@
     <!-- Pinterest e-comm prototype content -->
 
     <!-- TOP BAR -->
+    <div class='topBar'>
     <header class="mainNav">
         <div class='navInputsLeft'>
             <!-- Home button -->
@@ -54,110 +55,145 @@
             </div>
         </div>
     </header>
+    </div>
 
     <!-- CHECKOUT TITLE -->
     <p class='checkout'>Checkout</p>
 
     <!-- CHECKOUT FORMS -->
+    <div class='form'>
     <form action="">
     
     <!-- SHIPPING FORM -->
     <fieldset class='shipping'>
     <p class='formTitle'>1. Shipping</p>
-        
     <!-- Display .shippingInputs class when user ticks shippingCheckbox -->
         <!-- create class shippingInputs  -->
-        <!-- First name input -->
-        <div>
-            <label for='firstName'>First name</label>
-            <input type='text' name='firstName' id='firstName' placeholder='First name'>
-        </div>
+        <table class='shippingTable'>
+            <tr>
+                <td class='50'>
+                    <!-- First name input -->
+                    <label for='firstName'>First name</label>
+                    <input type='text' name='firstName' id='firstName' placeholder='First name'>
+                </td>
+                <td class='50'>    
+                    <!-- Last name input -->
+                    <label for='lastName'>Last name</label>
+                    <input type='text' name='lastName' id='lastName' placeholder='Last name'>
+                </td>
+            </tr>
+            <tr>
+                <td class='100'>
+                    <!-- Address 1 input -->
+                    <label for='address1'>Address 1</label>
+                    <input type='text' name='address1' id='address1' placeholder='Address 1'>
+                </td>
+            </tr>
+                <td class='50'>
+                    <!-- Address 2 input -->
+                    <label for='address2'>Address 2</label>
+                    <input type='text' name='address2' id='address2' placeholder='Address 2'>
+                </td>
+            <tr>
+                <td class='33.3'>
+                    <!-- City input -->
+                    <label for='city'>City</label>
+                    <input type='text' name='city' id='city' placeholder='City'>
+                    <!-- State input -->
+                    <label for='state'>State</label>
+                    <input type='text' name='state' id='state' placeholder='State'>
+                    <!-- Zip input -->
+                    <label for='zip'>Zip</label>
+                    <input type='text' name='zip' id='zip' placeholder='Zip'>
+                </td>
+            </tr>
+            <tr>
+                <td class='100'> 
+                    <!-- Email input -->
+                    <label for='email'>Email</label>
+                    <input type='email' name='email' id='email' placeholder='Email'>
+                </td>
+            <tr>
+                <td class='50'>
+                    <!-- Phone number input -->
+                    <label for='phoneNumber'>Phone number</label>
+                    <input type='text' name='phoneNumber' id='phoneNumber' placeholder='Phone number'>
+                </td>
+            </tr>
+        </table>
 
-        <!-- Last name input -->
-        <label for='lastName'>Last name</label>
-        <input type='text' name='lastName' id='lastName' placeholder='Last name'>
-        <!-- Address 1 input -->
-        <label for='address1'>Address 1</label>
-        <input type='text' name='address1' id='address1' placeholder='Address 1'>
-        <!-- Address 2 input -->
-        <label for='address2'>Address 2</label>
-        <input type='text' name='address2' id='address2' placeholder='Address 2'>
-        <!-- City input -->
-        <label for='city'>City</label>
-        <input type='text' name='city' id='city' placeholder='City'>
-        <!-- State input -->
-        <label for='state'>State</label>
-        <input type='text' name='state' id='state' placeholder='State'>
-        <!-- Zip input -->
-        <label for='zip'>Zip</label>
-        <input type='text' name='zip' id='zip' placeholder='Zip'>
-        
-        <!-- Email input -->
-        <label for='email'>Email</label>
-        <input type='email' name='email' id='email' placeholder='Email'>
-        <!-- Phone number input -->
-        <label for='phoneNumber'>Phone number</label>
-        <input type='text' name='phoneNumber' id='phoneNumber' placeholder='Phone number'>
         <!-- Privacy policy paragraph -->
         <p class='policy'>Braun will use this info to confirm your order and shipping.<strong>We'll store your payment info so you can use it again. Learn more at our privacy policy.</strong></p>
         <!-- Save Shipping button -->
     <!-- in JS toggle "Edit Shipping" when when button is clicked -->
     <!-- in JS side up shipping fieldset, hide input box styling / privacy policy, and add checkmark  -->
-        <button type='button' id='formButton'>Save Shipping</button>
+        <button type='button' id='shippingButton'>Save Shipping</button>
     </fieldset>
         
     <!-- PAYMENT FORM -->
     <fieldset class='payment'>
     <p class='formTitle'>2. Payment</p>
-        <!-- First name input for card-->
-        <label for='firstNameCard'>First name</label>
-        <input type='text' name='firstNameCard' id='firstNameCard' placeholder='First name'>
-        <!-- Last name input for card-->
-        <label for='lastNameCard'>Last name</label>
-        <input type='text' name='lastNameCard' id='lastNameCard' placeholder='Last name'>
-        <!-- Card number input -->
-        <label for='cardNumber'>Card number</label>
-        <input type='text' name='cardNumber' id='cardNumber' placeholder='Card number'>
-         <!-- Expire input -->
-        <label for='expire'>Exp MM/YY</label>
-        <input type='text' name='expire' id='expire' placeholder='Exp MM/YY'>
-        <!-- CVV input -->
-        <label for='cvv'>CVV</label>
-        <input type='text' name='cvv' id='cvv' placeholder='CVV'>
-        <!-- Use shipping info checkbox input -->
-        <label for='shippingCheckbox'>Use shipping info</label>
-        <input type="checkbox" name='shippingCheckbox' id='shippingCheckbox' placeholder='Use shipping info'>
-    
-    <!-- Hide class .billingInputs in JS when checkbox is ticked and display condensed user input saved from shipping form -->
-    <!-- create a class .billingInputs that this lives in -->
-        <!-- First name input -->
-        <label for='firstName'>First name</label>
-        <input type='text' name='firstName' id='firstName' placeholder='First name'>
-        <!-- Last name input -->
-        <label for='lastName'>Last name</label>
-        <input type='text' name='lastName' id='lastName' placeholder='Last name'>
-        <!-- Address 1 input -->
-        <label for='address1'>Address 1</label>
-        <input type='text' name='address1' id='address1' placeholder='Address 1'>
-        <!-- Address 2 input -->
-        <label for='address2'>Address 2</label>
-        <input type='text' name='address2' id='address2' placeholder='Address 2'>
-        <!-- City input -->
-        <label for='city'>City</label>
-        <input type='text' name='city' id='city' placeholder='City'>
-        <!-- State input -->
-        <label for='state'>State</label>
-        <input type='text' name='state' id='state' placeholder='State'>
-        <!-- Zip input -->
-        <label for='zip'>Zip</label>
-        <input type='text' name='zip' id='zip' placeholder='Zip'>
-        
+        <table class='paymentTable'>
+            <tr>
+                <td class='50'>
+                    <!-- First name input for card-->
+                    <label for='firstNameCard'>First name</label>
+                    <input type='text' name='firstNameCard' id='firstNameCard' placeholder='First name'>
+                </td>
+                <td class='50'>   
+                    <!-- Last name input for card-->
+                    <label for='lastNameCard'>Last name</label>
+                    <input type='text' name='lastNameCard' id='lastNameCard' placeholder='Last name'>
+                </td> 
+            </tr>
+            <tr>
+                <!-- Card number input -->
+                <label for='cardNumber'>Card number</label>
+                <input type='text' name='cardNumber' id='cardNumber' placeholder='Card number'>
+                 <!-- Expire input -->
+                <label for='expire'>Exp MM/YY</label>
+                <input type='text' name='expire' id='expire' placeholder='Exp MM/YY'>
+                <!-- CVV input -->
+                <label for='cvv'>CVV</label>
+                <input type='text' name='cvv' id='cvv' placeholder='CVV'>
+            </tr>
+            <tr>
+                <!-- Use shipping info checkbox input -->
+                <label for='shippingCheckbox'>Use shipping info</label>
+                <input type="checkbox" name='shippingCheckbox' id='shippingCheckbox' placeholder='Use shipping info'>
+            </tr>
+
+        <!-- Hide class .billingInputs in JS when checkbox is ticked and display condensed user input saved from shipping form -->
+        <!-- create a class .billingInputs that this lives in -->
+            <!-- First name input -->
+            <label for='firstName'>First name</label>
+            <input type='text' name='firstName' id='firstName' placeholder='First name'>
+            <!-- Last name input -->
+            <label for='lastName'>Last name</label>
+            <input type='text' name='lastName' id='lastName' placeholder='Last name'>
+            <!-- Address 1 input -->
+            <label for='address1'>Address 1</label>
+            <input type='text' name='address1' id='address1' placeholder='Address 1'>
+            <!-- Address 2 input -->
+            <label for='address2'>Address 2</label>
+            <input type='text' name='address2' id='address2' placeholder='Address 2'>
+            <!-- City input -->
+            <label for='city'>City</label>
+            <input type='text' name='city' id='city' placeholder='City'>
+            <!-- State input -->
+            <label for='state'>State</label>
+            <input type='text' name='state' id='state' placeholder='State'>
+            <!-- Zip input -->
+            <label for='zip'>Zip</label>
+            <input type='text' name='zip' id='zip' placeholder='Zip'>
+        </table>
+
         <!-- Privacy policy paragraph -->
         <p class='policy'>Braun will use this info to confirm your order and shipping.<strong>We'll store your payment info so you can use it again. Learn more at our privacy policy.</strong></p>
         <!-- Save Payment button -->
     <!-- in JS toggle "Edit Payment" when when button is clicked -->
     <!-- in JS slide up Payment fieldset, hide input box styling / privacy policy, and add checkmark -->
-        <button type='button' id='formButton'>Save Payment</button>
+        <button type='button' id='paymentButton'>Save Payment</button>
     </fieldset>
         
     <!-- REVIEW FORM -->
@@ -165,10 +201,12 @@
     <p class='formTitle'>3. Review</p>
         <!-- product info div -->
         <div class='productInfo'>
-        <image src ='img/Braun_BN0024.jpg'>
-        <p>Braun</p>
-        <p>$200.00</p>
-        <p>BN0024 - Men's</p>
+            <image src ='img/Braun_BN0024.jpg'>
+            <div class='productText'>
+                <p>Braun</p>
+                <p>$200.00</p>
+                <p>BN0024 - Men's</p>
+            </div>
         </div>
         
         <!-- Quantity input -->
@@ -204,14 +242,17 @@
     <hr>
     
         <!-- Total -->
-        <h3>Total</h3>
-        <p>$200.00</p>
+        <div class='total<'>
+            <p>Total</p>
+            <h3>$200.00</h3>
+        </div>
         <!-- Place Order -->
     <!-- hide on page load, use JS to show button when both shipping and payment buttons clicked -->
     <!-- add link to confirm.html -->
         <button type='button' id='submitButton'>Place Order</button> 
     </fieldset> 
     </form>
+    </div>
 
     <!-- JS links -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
