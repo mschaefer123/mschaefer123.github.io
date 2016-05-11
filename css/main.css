@@ -143,6 +143,35 @@ html {
 /*Main Nav Styles*/
 /*===========================================================================*/
 /*need to center horizontally*/
+.col-full {
+    width: 100%;
+    float: left;
+}
+
+.col-threequarters {
+    width: 75%;
+    float: left;
+}
+
+.col-half:nth-of-type(odd) {
+    margin-right: 8%;
+}
+
+.col-half {
+    width: 46%;
+    float: left;
+}
+
+.col-third {
+    width: 30%;
+    float: left;
+}
+
+.col-third:nth-of-type() {
+    margin-right: 5%;
+
+}
+
 .topBar {
     display: block;
     text-align: center;
@@ -190,6 +219,7 @@ html {
     width: 875px;
     background-color: #E9E9E9;
     font-size: 16px;
+    font-weight: bold;
     color: #b0b0b0;
     border: 1px #D8D8D8;
     padding: 0 0 0 20px;
@@ -390,42 +420,44 @@ input {
     border-bottom: solid 2px #0682FF;
 }
 
-
 input:placeholder-shown {
     font-weight: 400;
 }
 
+table {
+    width: 100%;
+}
+
 /*Column 100%*/
-tr .100 {
+#address1, #address2, #email {
     width: 100%;
     float: left;
     margin-bottom: 5px;
+    display: block;
 }
 
 /*Column 50%*/
-tr .50 {
+#firstName, #LastName, #firstNameCard, #lastNameCard, #phoneNumber {
     width: 50%;
     float: left;
     margin-bottom: 5px;
+    display: inline-block;
+}
+
+/*Column 33.3%*/
+#city, #state, #zip, #cardNumber, #expire, #cvv {
+    width: 33.3%;
+    float: left;
+    margin-bottom: 5px;
+    display: inline-block;
 }
 
 /*Column 75%*/
-tr .75 {
+.75 {
     width: 75%;
     float: left;
     margin-bottom: 5px;
-}
-
-/*Column 1/3*/
-#city, #state, #zip, #cardNumber, #expire, #cvv {
-    width: 29%
-    display: inline;
-    float: left;
-    margin-bottom: 5px;
-}
-
-#cardNumber {
-    width: 75%;
+    display: inline-block;
 }
 
 /*Show label without JS?*/
@@ -524,13 +556,19 @@ input:focus {
     bottom: 30px;
     display: block;
     text-align: center;
+    font-weight: bold;
     outline: none;
+    text-decoration: none;
+    padding: 9px 0;
 }
 
+/*#submitButton a {
+    font-weight: bold;
+}
+*/
 #submitButton:hover {
     background-color: #0575e5;
 }
-
 
 
 /* ==========================================================================

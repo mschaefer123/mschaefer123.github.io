@@ -66,62 +66,54 @@
     
     <!-- SHIPPING FORM -->
     <fieldset class='shipping'>
-    <p class='formTitle'>1. Shipping</p>
-    <!-- Display .shippingInputs class when user ticks shippingCheckbox -->
+        <p class='formTitle'>1. Shipping</p>
+        <!-- Display .shippingInputs class when user ticks shippingCheckbox -->
         <!-- create class shippingInputs  -->
-        <table class='shippingTable'>
-            <tr>
-                <td class='50'>
-                    <!-- First name input -->
-                    <label for='firstName'>First name</label>
-                    <input type='text' name='firstName' id='firstName' placeholder='First name'>
-                </td>
-                <td class='50'>    
-                    <!-- Last name input -->
-                    <label for='lastName'>Last name</label>
-                    <input type='text' name='lastName' id='lastName' placeholder='Last name'>
-                </td>
-            </tr>
-            <tr>
-                <td class='100'>
-                    <!-- Address 1 input -->
-                    <label for='address1'>Address 1</label>
-                    <input type='text' name='address1' id='address1' placeholder='Address 1'>
-                </td>
-            </tr>
-                <td class='50'>
-                    <!-- Address 2 input -->
-                    <label for='address2'>Address 2</label>
-                    <input type='text' name='address2' id='address2' placeholder='Address 2'>
-                </td>
-            <tr>
-                <td class='33.3'>
-                    <!-- City input -->
-                    <label for='city'>City</label>
-                    <input type='text' name='city' id='city' placeholder='City'>
-                    <!-- State input -->
-                    <label for='state'>State</label>
-                    <input type='text' name='state' id='state' placeholder='State'>
-                    <!-- Zip input -->
-                    <label for='zip'>Zip</label>
-                    <input type='text' name='zip' id='zip' placeholder='Zip'>
-                </td>
-            </tr>
-            <tr>
-                <td class='100'> 
-                    <!-- Email input -->
-                    <label for='email'>Email</label>
-                    <input type='email' name='email' id='email' placeholder='Email'>
-                </td>
-            <tr>
-                <td class='50'>
-                    <!-- Phone number input -->
-                    <label for='phoneNumber'>Phone number</label>
-                    <input type='text' name='phoneNumber' id='phoneNumber' placeholder='Phone number'>
-                </td>
-            </tr>
-        </table>
-
+        <!-- First name input -->
+        <div class='col-half'>
+            <label for='firstName'>First name</label>
+            <input type='text' name='firstName' id='firstName' class='.50' placeholder='First name'>   
+        </div>
+        <!-- Last name input -->
+        <div class='col-half'>
+            <label for='lastName'>Last name</label>
+            <input type='text' name='lastName' id='lastName' class='.50' placeholder='Last name'>
+        </div>
+        <!-- Address 1 input -->
+        <div class='col-full'>
+            <label for='address1'>Address 1</label>
+            <input type='text' name='address1' id='address1' class='.100' placeholder='Address 1'>
+        </div>
+        <!-- Address 2 input -->
+        <div class='col-full'>
+            <label for='address2'>Address 2</label>
+            <input type='text' name='address2' id='address2' class='.100' placeholder='Address 2'>
+        <!-- City input -->
+        <div class='col-third'>
+            <label for='city'>City</label>
+            <input type='text' name='city' id='city' class='.33' placeholder='City'>
+        </div>
+        <!-- State input -->
+        <div class='col-third'>
+            <label for='state'>State</label>
+            <input type='text' name='state' id='state' class='.33' placeholder='State'>
+        </div>
+        <!-- Zip input -->
+        <div class='col-third'>
+            <label for='zip'>Zip</label>
+            <input type='text' name='zip' id='zip' class='.33' placeholder='Zip'> 
+        </div>
+        <!-- Email input -->
+        <div class='col-full'>
+            <label for='email'>Email</label>
+            <input type='email' name='email' id='email' class='.100' placeholder='Email'>
+        </div>
+        <!-- Phone number input -->
+        <div class='col-half'>
+            <label for='phoneNumber'>Phone number</label>
+            <input type='text' name='phoneNumber' id='phoneNumber' class='.50' placeholder='Phone number'>
+        </div>
+        
         <!-- Privacy policy paragraph -->
         <p class='policy'>Braun will use this info to confirm your order and shipping.<strong>We'll store your payment info so you can use it again. Learn more at our privacy policy.</strong></p>
         <!-- Save Shipping button -->
@@ -132,61 +124,56 @@
         
     <!-- PAYMENT FORM -->
     <fieldset class='payment'>
-    <p class='formTitle'>2. Payment</p>
-        <table class='paymentTable'>
-            <tr>
-                <td class='50'>
-                    <!-- First name input for card-->
-                    <label for='firstNameCard'>First name</label>
-                    <input type='text' name='firstNameCard' id='firstNameCard' placeholder='First name'>
-                </td>
-                <td class='50'>   
-                    <!-- Last name input for card-->
-                    <label for='lastNameCard'>Last name</label>
-                    <input type='text' name='lastNameCard' id='lastNameCard' placeholder='Last name'>
-                </td> 
-            </tr>
-            <tr>
-                <!-- Card number input -->
-                <label for='cardNumber'>Card number</label>
-                <input type='text' name='cardNumber' id='cardNumber' placeholder='Card number'>
-                 <!-- Expire input -->
-                <label for='expire'>Exp MM/YY</label>
-                <input type='text' name='expire' id='expire' placeholder='Exp MM/YY'>
-                <!-- CVV input -->
-                <label for='cvv'>CVV</label>
-                <input type='text' name='cvv' id='cvv' placeholder='CVV'>
-            </tr>
-            <tr>
-                <!-- Use shipping info checkbox input -->
-                <label for='shippingCheckbox'>Use shipping info</label>
-                <input type="checkbox" name='shippingCheckbox' id='shippingCheckbox' placeholder='Use shipping info'>
-            </tr>
+        <p class='formTitle'>2. Payment</p>
+        <!-- First name input for card-->
+        <div class='col-half'>
+            <label for='firstNameCard'>First name</label>
+            <input type='text' name='firstNameCard' id='firstNameCard'  placeholder='First name'>  
+        </div>
+
+        <!-- Last name input for card-->
+        <div class='col-half'>
+            <label for='lastNameCard'>Last name</label>
+            <input type='text' name='lastNameCard' id='lastNameCard' class='.50' placeholder='Last name'>
+        </div>
+        <!-- Card number input -->
+        <div class='col-third'>
+        <label for='cardNumber'>Card number</label>
+        <input type='text' name='cardNumber' id='cardNumber' class='.33' placeholder='Card number'>
+        </div>
+        <!-- Expire input -->
+        <label for='expire'>Exp MM/YY</label>
+        <input type='text' name='expire' id='expire' class='.33' placeholder='Exp MM/YY'>
+        <!-- CVV input -->
+        <label for='cvv'>CVV</label>
+        <input type='text' name='cvv' id='cvv' class='.33' placeholder='CVV'>
+        <!-- Use shipping info checkbox input -->
+        <label for='shippingCheckbox'>Use shipping info</label>
+        <input type="checkbox" name='shippingCheckbox' id='shippingCheckbox' class='.75' placeholder='Use shipping info'>
 
         <!-- Hide class .billingInputs in JS when checkbox is ticked and display condensed user input saved from shipping form -->
         <!-- create a class .billingInputs that this lives in -->
-            <!-- First name input -->
-            <label for='firstName'>First name</label>
-            <input type='text' name='firstName' id='firstName' placeholder='First name'>
-            <!-- Last name input -->
-            <label for='lastName'>Last name</label>
-            <input type='text' name='lastName' id='lastName' placeholder='Last name'>
-            <!-- Address 1 input -->
-            <label for='address1'>Address 1</label>
-            <input type='text' name='address1' id='address1' placeholder='Address 1'>
-            <!-- Address 2 input -->
-            <label for='address2'>Address 2</label>
-            <input type='text' name='address2' id='address2' placeholder='Address 2'>
-            <!-- City input -->
-            <label for='city'>City</label>
-            <input type='text' name='city' id='city' placeholder='City'>
-            <!-- State input -->
-            <label for='state'>State</label>
-            <input type='text' name='state' id='state' placeholder='State'>
-            <!-- Zip input -->
-            <label for='zip'>Zip</label>
-            <input type='text' name='zip' id='zip' placeholder='Zip'>
-        </table>
+        <!-- First name input -->
+        <label for='firstName'>First name</label>
+        <input type='text' name='firstName' id='firstName' class='.50' placeholder='First name'>
+        <!-- Last name input -->
+        <label for='lastName'>Last name</label>
+        <input type='text' name='lastName' id='lastName' class='.50' placeholder='Last name'>
+        <!-- Address 1 input -->
+        <label for='address1'>Address 1</label>
+        <input type='text' name='address1' id='address1' class='.100' placeholder='Address 1'>
+        <!-- Address 2 input -->
+        <label for='address2'>Address 2</label>
+        <input type='text' name='address2' id='address2' class='.100' placeholder='Address 2'>
+        <!-- City input -->
+        <label for='city'>City</label>
+        <input type='text' name='city' id='city' class='.33' placeholder='City'>
+        <!-- State input -->
+        <label for='state'>State</label>
+        <input type='text' name='state' id='state' class='.33' placeholder='State'>
+        <!-- Zip input -->
+        <label for='zip'>Zip</label>
+        <input type='text' name='zip' id='zip' class='.33' placeholder='Zip'>
 
         <!-- Privacy policy paragraph -->
         <p class='policy'>Braun will use this info to confirm your order and shipping.<strong>We'll store your payment info so you can use it again. Learn more at our privacy policy.</strong></p>
@@ -248,8 +235,8 @@
         </div>
         <!-- Place Order -->
     <!-- hide on page load, use JS to show button when both shipping and payment buttons clicked -->
-    <!-- add link to confirm.html -->
-        <button type='button' id='submitButton'>Place Order</button> 
+  <!-- does this work? -->
+        <a id='submitButton' href='confirm.html'>Place Order</a> 
     </fieldset> 
     </form>
     </div>

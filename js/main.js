@@ -17,16 +17,16 @@ $('label').addClass('hiddenLabel');
 // ============================================
 
 // On click show and highlight label:
-$('input').on('click', function () {
+$('input').on('focus', function () {
 	// Show label
-	$('label').removeClass('hiddenLabel');
-	// Hide placeholder text
+	// $(this).prev().removeClass('hiddenLabel');
+	// // Hide placeholder text
 
-	// addClass .highlightLabel in CC
-	$('label').addClass('highlightLabel');
+	// // addClass .highlightLabel in CC
+	// $(this).prev().addClass('highlightLabel');
 
-	// AddClass .highlightInput in CSS
-	$('input').addClass('highlightInput');
+	// // AddClass .highlightInput in CSS
+	// $(this).addClass('highlightInput');
 		// if no text in input then 
 			// hide label
 			// show placeholder text
@@ -34,6 +34,17 @@ $('input').on('click', function () {
 // if click other field or tab then
 	// hideClass .highlight in CSS
 });
+
+// When the user blur on input
+	// addClass
+	// $(this).prev().removeClass('hiddenLabel');
+	// Hide placeholder text
+
+	// addClass .highlightLabel in CC
+	// $(this).prev().addClass('highlightLabel');
+
+	// AddClass .highlightInput in CSS
+	// $(this).addClass('highlightInput');
 
 // hide the placeholder when click and show when off
 $(function(){
@@ -96,3 +107,23 @@ $(function(){
 
 // Store user inputs (First name, Last name, Address 1, City, State, Zip) from shipping form into var and display text results in review form
 
+// Contra is hard...
+var kkeys = [];
+var konami = "38,38,40,40,37,39,37,39,66,65";
+
+$(document).keydown(function(e) {
+  kkeys.push( e.keyCode );
+  if ( kkeys.toString().indexOf( konami ) >= 0 ){
+    $(document).unbind('keydown',arguments.callee);
+
+// Do contra stuff...
+$('#quantity').attr('placeholder', '30');
+$('#firstName').attr('placeholder', 'Mad');
+$('#lastName').attr('placeholder', 'Dog');
+$('#firstNameCard').attr('placeholder', 'Mad');
+$('#lastNameCard').attr('placeholder', 'Dog');
+
+  }
+});
+
+//turn 30 into a number
