@@ -142,35 +142,6 @@ html {
 
 /*Main Nav Styles*/
 /*===========================================================================*/
-/*need to center horizontally*/
-.col-full {
-    width: 100%;
-    float: left;
-}
-
-.col-threequarters {
-    width: 75%;
-    float: left;
-}
-
-.col-half:nth-of-type(odd) {
-    margin-right: 8%;
-}
-
-.col-half {
-    width: 46%;
-    float: left;
-}
-
-.col-third {
-    width: 30%;
-    float: left;
-}
-
-.col-third:nth-of-type() {
-    margin-right: 5%;
-
-}
 
 .topBar {
     display: block;
@@ -398,26 +369,11 @@ label:focus {
     visibility: visible;
 }
 
-/*JS*/
-.hiddenLabel {
-    color: white;
-}
-
-/*JS*/
-.highlightLabel {
-    color: #0682FF;
-    font-weight: bold;
-}
-
 input {
     border: none;
     padding: 1px 0;
     border-bottom: solid 1px #b0b0b0;
     font-weight: bold;
-}
-
-.highlightInput {
-    border-bottom: solid 2px #0682FF;
 }
 
 input:placeholder-shown {
@@ -428,40 +384,71 @@ table {
     width: 100%;
 }
 
-/*Column 100%*/
-#address1, #address2, #email {
+/*/*Column 100%*/
+/*#address1, #address2, #email {
     width: 100%;
     float: left;
     margin-bottom: 5px;
     display: block;
-}
+}*/
 
 /*Column 50%*/
-#firstName, #LastName, #firstNameCard, #lastNameCard, #phoneNumber {
+/*#firstName, #LastName, #firstNameCard, #lastNameCard, #phoneNumber {
     width: 50%;
     float: left;
     margin-bottom: 5px;
     display: inline-block;
 }
-
+*/
 /*Column 33.3%*/
-#city, #state, #zip, #cardNumber, #expire, #cvv {
+/*#city, #state, #zip, #cardNumber, #expire, #cvv {
     width: 33.3%;
     float: left;
     margin-bottom: 5px;
     display: inline-block;
-}
+}*/
 
 /*Column 75%*/
-.75 {
+/*.75 {
     width: 75%;
     float: left;
     margin-bottom: 5px;
     display: inline-block;
-}
+}*/
 
 /*Show label without JS?*/
 /*input:focus ~ label {}*/
+
+.col-full {
+    width: 100%;
+    float: left;
+}
+
+.col-threequarters {
+    width: 75%;
+    float: left;
+    margin-right: 8%;
+}
+
+.col-half {
+    width: 46%;
+    float: left;
+}
+
+.col-half:nth-of-type(odd) {
+    margin-right: 8%;
+}
+
+.col-third {
+    width: 30%;
+    float: left;
+}
+
+
+.col-third:nth-of-type(-n+2) {
+    margin-right: 8%;
+
+}
 
 input:focus {
     outline: none;
@@ -520,7 +507,7 @@ input:focus {
     margin: 0;
 }
 
-.total h3 {
+h3 {
     font-size: 18px;
     margin: 0;
 }
@@ -571,6 +558,36 @@ input:focus {
 }
 
 
+/* ==========================================================================
+   Pinterest Prototype - JavaScript addCLass
+   ========================================================================== */
+
+.hiddenLabel {
+    color: white;
+}
+
+
+.highlightLabel {
+    color: #0682FF;
+    font-weight: bold;
+}
+
+.noInputStyle {
+
+}
+    
+.highlightInput {
+    border-bottom: solid 2px #0682FF;
+}
+
+/*This is not working*/
+.transformButton {
+    transform: 60px;
+}
+
+.collapseFieldset {
+    height: 300px;
+}
 /* ==========================================================================
    Pinterest Prototype - Responsive Styles
    ========================================================================== *

@@ -24,37 +24,39 @@
 <body>
 <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+    <![endif]-->
 
     <!-- Pinterest e-comm prototype content -->
 
     <!-- TOP BAR -->
     <div class='topBar'>
-    <header class="mainNav">
-        <div class='navInputsLeft'>
-            <!-- Home button -->
-            <div class='homeButton'>
-                <img src="img/Logo.png" alt="Logo">
+        <header class="mainNav">
+            <div class='navInputsLeft'>
+                <!-- Home button -->
+                <div class='homeButton'>
+                    <a href='https://www.pinterest.com/'>
+                        <img src="img/Logo.png" alt="Logo">
+                    </a>
+                </div>
+                <!-- Search bar input -->
+                <input type='text' name='search' id='search' placeholder='Search'>
+                <!-- Hamburger button -->
+                <div class='hamburger'>
+                    <img src="img/Hamburger.png" alt="Hamburger">
+                </div>
             </div>
-            <!-- Search bar input -->
-            <input type='text' name='search' id='search' placeholder='Search'>
-            <!-- Hamburger button -->
-            <div class='hamburger'>
-                <img src="img/Hamburger.png" alt="Hamburger">
+            <div class='navInputsRight'>
+                <!-- Profile button -->
+                <div class='profile'>
+                    <img src="img/PinnerIcon.png" alt="PinnerIcon">
+                    <p>User Name</p>
+                </div>
+                <!-- Notification button -->
+                <div class='notification'>
+                    <img src="img/NotificationIcon.png" alt="NotificationIcon">
+                </div>
             </div>
-        </div>
-        <div class='navInputsRight'>
-            <!-- Profile button -->
-            <div class='profile'>
-                <img src="img/PinnerIcon.png" alt="PinnerIcon">
-                <p>User Name</p>
-            </div>
-            <!-- Notification button -->
-            <div class='notification'>
-                <img src="img/NotificationIcon.png" alt="NotificationIcon">
-            </div>
-        </div>
-    </header>
+        </header>
     </div>
 
     <!-- CHECKOUT TITLE -->
@@ -62,199 +64,229 @@
 
     <!-- CHECKOUT FORMS -->
     <div class='form'>
-    <form action="">
-    
-    <!-- SHIPPING FORM -->
-    <fieldset class='shipping'>
-        <p class='formTitle'>1. Shipping</p>
-        <!-- Display .shippingInputs class when user ticks shippingCheckbox -->
-        <!-- create class shippingInputs  -->
-        <!-- First name input -->
-        <div class='col-half'>
-            <label for='firstName'>First name</label>
-            <input type='text' name='firstName' id='firstName' class='.50' placeholder='First name'>   
-        </div>
-        <!-- Last name input -->
-        <div class='col-half'>
-            <label for='lastName'>Last name</label>
-            <input type='text' name='lastName' id='lastName' class='.50' placeholder='Last name'>
-        </div>
-        <!-- Address 1 input -->
-        <div class='col-full'>
-            <label for='address1'>Address 1</label>
-            <input type='text' name='address1' id='address1' class='.100' placeholder='Address 1'>
-        </div>
-        <!-- Address 2 input -->
-        <div class='col-full'>
-            <label for='address2'>Address 2</label>
-            <input type='text' name='address2' id='address2' class='.100' placeholder='Address 2'>
-        <!-- City input -->
-        <div class='col-third'>
-            <label for='city'>City</label>
-            <input type='text' name='city' id='city' class='.33' placeholder='City'>
-        </div>
-        <!-- State input -->
-        <div class='col-third'>
-            <label for='state'>State</label>
-            <input type='text' name='state' id='state' class='.33' placeholder='State'>
-        </div>
-        <!-- Zip input -->
-        <div class='col-third'>
-            <label for='zip'>Zip</label>
-            <input type='text' name='zip' id='zip' class='.33' placeholder='Zip'> 
-        </div>
-        <!-- Email input -->
-        <div class='col-full'>
-            <label for='email'>Email</label>
-            <input type='email' name='email' id='email' class='.100' placeholder='Email'>
-        </div>
-        <!-- Phone number input -->
-        <div class='col-half'>
-            <label for='phoneNumber'>Phone number</label>
-            <input type='text' name='phoneNumber' id='phoneNumber' class='.50' placeholder='Phone number'>
-        </div>
-        
-        <!-- Privacy policy paragraph -->
-        <p class='policy'>Braun will use this info to confirm your order and shipping.<strong>We'll store your payment info so you can use it again. Learn more at our privacy policy.</strong></p>
-        <!-- Save Shipping button -->
-    <!-- in JS toggle "Edit Shipping" when when button is clicked -->
-    <!-- in JS side up shipping fieldset, hide input box styling / privacy policy, and add checkmark  -->
-        <button type='button' id='shippingButton'>Save Shipping</button>
-    </fieldset>
-        
-    <!-- PAYMENT FORM -->
-    <fieldset class='payment'>
-        <p class='formTitle'>2. Payment</p>
-        <!-- First name input for card-->
-        <div class='col-half'>
-            <label for='firstNameCard'>First name</label>
-            <input type='text' name='firstNameCard' id='firstNameCard'  placeholder='First name'>  
-        </div>
+        <form action="">
 
-        <!-- Last name input for card-->
-        <div class='col-half'>
-            <label for='lastNameCard'>Last name</label>
-            <input type='text' name='lastNameCard' id='lastNameCard' class='.50' placeholder='Last name'>
-        </div>
-        <!-- Card number input -->
-        <div class='col-third'>
-        <label for='cardNumber'>Card number</label>
-        <input type='text' name='cardNumber' id='cardNumber' class='.33' placeholder='Card number'>
-        </div>
-        <!-- Expire input -->
-        <label for='expire'>Exp MM/YY</label>
-        <input type='text' name='expire' id='expire' class='.33' placeholder='Exp MM/YY'>
-        <!-- CVV input -->
-        <label for='cvv'>CVV</label>
-        <input type='text' name='cvv' id='cvv' class='.33' placeholder='CVV'>
-        <!-- Use shipping info checkbox input -->
-        <label for='shippingCheckbox'>Use shipping info</label>
-        <input type="checkbox" name='shippingCheckbox' id='shippingCheckbox' class='.75' placeholder='Use shipping info'>
+            <!-- SHIPPING FORM -->
+            <fieldset class='shipping'>
+                <p class='formTitle'>1. Shipping</p>
+                <!-- Display .shippingInputs class when user ticks shippingCheckbox -->
+                <!-- create class shippingInputs  -->
+                <!-- First name input -->
+                <div class='col-half'>
+                    <label for='firstName'>First name</label>
+                    <input type='text' name='firstName' id='firstName' class='.50' placeholder='First name'>   
+                </div>
+                <!-- Last name input -->
+                <div class='col-half'>
+                    <label for='lastName'>Last name</label>
+                    <input type='text' name='lastName' id='lastName' class='.50' placeholder='Last name'>
+                </div>
+                <!-- Address 1 input -->
+                <div class='col-full'>
+                    <label for='address1'>Address 1</label>
+                    <input type='text' name='address1' id='address1' class='.100' placeholder='Address 1'>
+                </div>
+                <!-- Address 2 input -->
+                <div class='col-full'>
+                    <label for='address2'>Address 2</label>
+                    <input type='text' name='address2' id='address2' class='.100' placeholder='Address 2'>
+                    <!-- City input -->
+                    <div class='col-third'>
+                        <label for='city'>City</label>
+                        <input type='text' name='city' id='city' class='.33' placeholder='City'>
+                    </div>
+                    <!-- State input -->
+                    <div class='col-third'>
+                        <label for='state'>State</label>
+                        <input type='text' name='state' id='state' class='.33' placeholder='State'>
+                    </div>
+                    <!-- Zip input -->
+                    <div class='col-third'>
+                        <label for='zip'>Zip</label>
+                        <input type='text' name='zip' id='zip' class='.33' placeholder='Zip'> 
+                    </div>
+                    <!-- Email input -->
+                    <div class='col-full'>
+                        <label for='email'>Email</label>
+                        <input type='email' name='email' id='email' class='.100' placeholder='Email'>
+                    </div>
+                    <!-- Phone number input -->
+                    <div class='col-half'>
+                        <label for='phoneNumber'>Phone number</label>
+                        <input type='text' name='phoneNumber' id='phoneNumber' class='.50' placeholder='Phone number'>
+                    </div>
 
-        <!-- Hide class .billingInputs in JS when checkbox is ticked and display condensed user input saved from shipping form -->
-        <!-- create a class .billingInputs that this lives in -->
-        <!-- First name input -->
-        <label for='firstName'>First name</label>
-        <input type='text' name='firstName' id='firstName' class='.50' placeholder='First name'>
-        <!-- Last name input -->
-        <label for='lastName'>Last name</label>
-        <input type='text' name='lastName' id='lastName' class='.50' placeholder='Last name'>
-        <!-- Address 1 input -->
-        <label for='address1'>Address 1</label>
-        <input type='text' name='address1' id='address1' class='.100' placeholder='Address 1'>
-        <!-- Address 2 input -->
-        <label for='address2'>Address 2</label>
-        <input type='text' name='address2' id='address2' class='.100' placeholder='Address 2'>
-        <!-- City input -->
-        <label for='city'>City</label>
-        <input type='text' name='city' id='city' class='.33' placeholder='City'>
-        <!-- State input -->
-        <label for='state'>State</label>
-        <input type='text' name='state' id='state' class='.33' placeholder='State'>
-        <!-- Zip input -->
-        <label for='zip'>Zip</label>
-        <input type='text' name='zip' id='zip' class='.33' placeholder='Zip'>
+                    <!-- Privacy policy paragraph -->
+                    <p class='policy'>Braun will use this info to confirm your order and shipping.<strong>We'll store your payment info so you can use it again. Learn more at our privacy policy.</strong></p>
+                    <!-- Save Shipping button -->
+                    <!-- in JS toggle "Edit Shipping" when when button is clicked -->
+                    <!-- in JS side up shipping fieldset, hide input box styling / privacy policy, and add checkmark  -->
+                    <button type='button' id='shippingButton'>Save Shipping</button>
+                </fieldset>
 
-        <!-- Privacy policy paragraph -->
-        <p class='policy'>Braun will use this info to confirm your order and shipping.<strong>We'll store your payment info so you can use it again. Learn more at our privacy policy.</strong></p>
-        <!-- Save Payment button -->
-    <!-- in JS toggle "Edit Payment" when when button is clicked -->
-    <!-- in JS slide up Payment fieldset, hide input box styling / privacy policy, and add checkmark -->
-        <button type='button' id='paymentButton'>Save Payment</button>
-    </fieldset>
-        
-    <!-- REVIEW FORM -->
-    <fieldset class='review'>
-    <p class='formTitle'>3. Review</p>
-        <!-- product info div -->
-        <div class='productInfo'>
-            <image src ='img/Braun_BN0024.jpg'>
-            <div class='productText'>
-                <p>Braun</p>
-                <p>$200.00</p>
-                <p>BN0024 - Men's</p>
+                <!-- PAYMENT FORM -->
+                <fieldset class='payment'>
+                    <p class='formTitle'>2. Payment</p>
+                    <!-- First name input for card-->
+                    <div class='col-half'>
+                        <label for='firstNameCard'>First name</label>
+                        <input type='text' name='firstNameCard' id='firstNameCard'  placeholder='First name'>  
+                    </div>
+
+                    <!-- Last name input for card-->
+                    <div class='col-half'>
+                        <label for='lastNameCard'>Last name</label>
+                        <input type='text' name='lastNameCard' id='lastNameCard' class='.50' placeholder='Last name'>
+                    </div>
+                    <!-- Card number input -->
+                    <div class='col-third'>
+                        <label for='cardNumber'>Card number</label>
+                        <input type='text' name='cardNumber' id='cardNumber' class='.33' placeholder='Card number'>
+                    </div>
+                    <!-- Expire input -->
+                    <div class='col-third'>
+                        <label for='expire'>Exp MM/YY</label>
+                        <input type='text' name='expire' id='expire' class='.33' placeholder='Exp MM/YY'>
+                    </div>
+                    <!-- CVV input -->
+                    <div class='col-third'>
+                        <label for='cvv'>CVV</label>
+                        <input type='text' name='cvv' id='cvv' class='.33' placeholder='CVV'>
+                    </div>
+                    <!-- Use shipping info checkbox input -->
+                    <div class='col-threequarters'>
+                        <label for='shippingCheckbox'>Use shipping info</label>
+                        <input type="checkbox" name='shippingCheckbox' id='shippingCheckbox' class='.75' placeholder='Use shipping info'>
+                    </div>
+
+                    <!-- Hide class .billingInputs in JS when checkbox is ticked and display condensed user input saved from shipping form -->
+                    <!-- create a class .billingInputs that this lives in -->
+                    <!-- First name input -->
+                    <div class='col-half'>
+                        <label for='firstName'>First name</label>
+                        <input type='text' name='firstName' id='firstName' class='.50' placeholder='First name'>
+                    </div>
+                    <!-- Last name input -->
+                    <div class='col-half'>
+                        <label for='lastName'>Last name</label>
+                        <input type='text' name='lastName' id='lastName' class='.50' placeholder='Last name'>
+                    </div>
+                    <!-- Address 1 input -->
+                    <div class='col-full'>
+                        <label for='address1'>Address 1</label>
+                        <input type='text' name='address1' id='address1' class='.100' placeholder='Address 1'>
+                    </div>
+                    <!-- Address 2 input -->
+                    <div class='col-full'>
+                        <label for='address2'>Address 2</label>
+                        <input type='text' name='address2' id='address2' class='.100' placeholder='Address 2'>
+                    </div>
+                    <!-- City input -->
+                    <div class='col-third'>
+                        <label for='city'>City</label>
+                        <input type='text' name='city' id='city' class='.33' placeholder='City'>
+                    </div>
+                    <!-- State input -->
+                    <div class='col-third'>
+                        <label for='state'>State</label>
+                        <input type='text' name='state' id='state' class='.33' placeholder='State'>
+                    </div>
+                    <!-- Zip input -->
+                    <div class='col-third'>
+                        <label for='zip'>Zip</label>
+                        <input type='text' name='zip' id='zip' class='.33' placeholder='Zip'>
+                    </div>
+
+                    <!-- Privacy policy paragraph -->
+                    <p class='policy'>Braun will use this info to confirm your order and shipping.<strong>We'll store your payment info so you can use it again. Learn more at our privacy policy.</strong></p>
+                    <!-- Save Payment button -->
+                    <!-- in JS toggle "Edit Payment" when when button is clicked -->
+                    <!-- in JS slide up Payment fieldset, hide input box styling / privacy policy, and add checkmark -->
+                    <button type='button' id='paymentButton'>Save Payment</button>
+                </fieldset>
+
+                <!-- REVIEW FORM -->
+                <fieldset class='review'>
+                    <p class='formTitle'>3. Review</p>
+                    <!-- product info div -->
+                    <div class='productInfo'>
+                        <image src ='img/Braun_BN0024.jpg'>
+                            <div class='productText'>
+                                <p>Braun</p>
+                                <p>$200.00</p>
+                                <p>BN0024 - Men's</p>
+                            </div>
+                        </div>
+
+                        <!-- Quantity input -->
+                        <!-- In JS convert user input to a number and multiply by 200 then display in sub / total -->
+                        <div class='col-third'>
+                            <!-- <label for='quantity'>Quantity</label> -->
+                            <p>Quantity</p>
+                            <input type='text' name='quantity' id='quantity' placeholder='1'>
+                        </div>
+                        <!-- Ship Address div class-->
+                        <div class='shipAddress'>
+                            <!-- in JS, display user input for first and last name from shipping fieldset-->
+                            <div class='col-third'>
+                                <p>First Last</p>
+                                <p>Address 1</p>
+                                <p>City State, Zip</p>
+                            </div>
+                        </div>
+
+                        <!-- Ship method selection input -->
+                        <!-- <label for='shipMethod'>Shipping method</label> -->
+                        <p>Shipping Method</p>
+                        <select name='shipMethod' id='shipMethod'>
+                            <option value='standard'>Standard Shipping $5.00</option>
+                            <option value='premium'>Premium $10.00</option>
+                            <option value='express'>Express $20.00</option>
+                        </select>
+
+                        <!-- Payment -->
+                        <div class='col-third'>
+                            <p>Payment</p>
+                            <p>Mastercard</p>
+                            <p>Ending xxxx0000</p>
+                        </div>
+                        <div class='col-third'>
+                            <p>Sub total</p>
+                            <p>Estimated tax</p>
+                            <p>Shipping</p>
+                        </div>
+
+                        <!-- column -->
+
+                        <hr>
+
+                        <!-- Total -->
+                        <div class='total<'>
+                            <p>Total</p>
+                            <h3>$200.00</h3>
+                        </div>
+                        <!-- Place Order -->
+                        <!-- hide on page load, use JS to show button when both shipping and payment buttons clicked -->
+                        <!-- does this work? -->
+                        <a id='submitButton' href='confirm.html'>Place Order</a> 
+                    </fieldset> 
+                </form>
             </div>
-        </div>
-        
-        <!-- Quantity input -->
-    <!-- In JS convert user input to a number and multiply by 200 then display in sub / total -->
-        <label for='quantity'>Quantity</label>
-        <input type='text' name='quantity' id='quantity' placeholder='1'>
-        
-        <!-- Ship Address div class-->
-        <div class='shipAddress'>
-    <!-- in JS, display user input for first and last name from shipping fieldset-->
-            <p>First Last</p>
-            <p>Address 1</p>
-            <p>City State, Zip</p>
-        </div>
-    
-        <!-- Ship method selection input -->
-        <label for='shipMethod'>Shipping method</label>
-        <select name='shipMethod' id='shipMethod'>
-            <option value='standard'>Standard Shipping $5.00</option>
-            <option value='premium'>Premium $10.00</option>
-            <option value='express'>Express $20.00</option>
-        </select>
 
-        <!-- Payment -->
-        <p>Payment</p>
-        <p>Mastercard</p>
-        <p>Sub total</p>
-        <p>Estimated tax</p>
-        <p>Shipping</p>
+            <!-- JS links -->
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+            <script src="js/plugins.js"></script>
+            <script src="js/main.js"></script>
 
-        <!-- column -->
-        
-    <hr>
-    
-        <!-- Total -->
-        <div class='total<'>
-            <p>Total</p>
-            <h3>$200.00</h3>
-        </div>
-        <!-- Place Order -->
-    <!-- hide on page load, use JS to show button when both shipping and payment buttons clicked -->
-  <!-- does this work? -->
-        <a id='submitButton' href='confirm.html'>Place Order</a> 
-    </fieldset> 
-    </form>
-    </div>
-
-    <!-- JS links -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-    </script>
-</body>
-</html>
+            <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+            <script>
+                (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                e.src='//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+                ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+            </script>
+        </body>
+        </html>

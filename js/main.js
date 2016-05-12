@@ -19,14 +19,14 @@ $('label').addClass('hiddenLabel');
 // On click show and highlight label:
 $('input').on('focus', function () {
 	// Show label
-	// $(this).prev().removeClass('hiddenLabel');
+	$(this).prev().removeClass('hiddenLabel');
 	// // Hide placeholder text
 
 	// // addClass .highlightLabel in CC
-	// $(this).prev().addClass('highlightLabel');
+	$(this).prev().addClass('highlightLabel');
 
 	// // AddClass .highlightInput in CSS
-	// $(this).addClass('highlightInput');
+	$(this).addClass('highlightInput');
 		// if no text in input then 
 			// hide label
 			// show placeholder text
@@ -36,15 +36,17 @@ $('input').on('focus', function () {
 });
 
 // When the user blur on input
+$('input').on('blur', function () {
 	// addClass
-	// $(this).prev().removeClass('hiddenLabel');
+	$(this).prev().addClass('hiddenLabel');
 	// Hide placeholder text
 
-	// addClass .highlightLabel in CC
-	// $(this).prev().addClass('highlightLabel');
+	// removeClass .highlightLabel in CC
+	$(this).prev().removeClass('highlightLabel');
 
-	// AddClass .highlightInput in CSS
-	// $(this).addClass('highlightInput');
+	// removeClass .highlightInput in CSS
+	$(this).removeClass('highlightInput');
+});
 
 // hide the placeholder when click and show when off
 $(function(){
@@ -62,16 +64,28 @@ $(function(){
 // ============================================
 
 // on "Save Shipping" button click: 
-	$('#shippingButton').on('click', function () {
-	// How to toggle?
-	// Change button text to "Edit Shipping" 
-	$('#shippingButton').html('Edit Shipping');
-	// SlideUp shipping fieldset:
+	$('#shippingButton').on('focus', function () {
+		// Change button text to "Edit Shipping" 
+		$('#shippingButton').html('Edit Shipping');
+		// SlideUp shipping fieldset:
+		$('.shipping').addClass('collapseFieldset');
 		// Hide input box styling
 		// Hide privacy policy text
+		$('.shipping .policy').hide()
+		// addClass to Slide up button
+		$('#shippingButton').addClass('transformButton')
 		// Add checkmark icon to top right of feildset
 		// Add first and last name, Address 1, City, State, Zip user input text to Review Form
 });
+
+//blur version of the above click function
+	$('#shippingButton').on('blur', function () {
+		// Change button text to "Save Shipping" 
+		$('#shippingButton').html('Save Shipping');
+		// SlideDown shipping fieldset:
+		$('.shipping').removeClass('collapseFieldset');
+});
+
 // ============================================
 // Payment Form
 // ============================================
@@ -79,14 +93,25 @@ $(function(){
 // Hide class .billingInputs and display .shippingInputs class (user input from shipping inputs) when user ticks .shippingCheckbox
 
 // on "Save Payment" button click: 
-	$('#paymentButton').on('click', function () {
-	// How to toggle?
-	// Change button text to "Edit Payment" 
-	$('#paymentButton').html('Edit Payment');
-	// SlideUp payment fieldset:
+	$('#paymentButton').on('focus', function () {
+		// Change button text to "Edit Payment" 
+		$('#paymentButton').html('Edit Payment');
+		// SlideUp payment fieldset:
+		$('.payment').addClass('collapseFieldset');
 		// Hide input box styling
 		// Hide privacy policy text
+		$('.payment .policy').hide()
+		// addClass to Slide up button
+		$('#paymentButton').addClass('transformButton');
 		// Add checkmark icon to top right of feildset
+});
+
+//blur version of the above click function
+	$('#paymentButton').on('blur', function () {
+		// Change button text to "Save Shipping" 
+		$('#paymentButton').html('Save Shipping');
+		// SlideDown shipping fieldset:
+		$('.payment').removeClass('collapseFieldset');
 });
 
 // ============================================
