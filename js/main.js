@@ -84,6 +84,8 @@ $(function(){
 		$('#shippingButton').html('Save Shipping');
 		// SlideDown shipping fieldset:
 		$('.shipping').removeClass('collapseFieldset');
+		// Show privacy policy text
+		$('.shipping .policy').show()
 });
 
 // ============================================
@@ -112,6 +114,9 @@ $(function(){
 		$('#paymentButton').html('Save Shipping');
 		// SlideDown shipping fieldset:
 		$('.payment').removeClass('collapseFieldset');
+		// Show privacy policy text
+		$('.payment .policy').show()
+
 });
 
 // ============================================
