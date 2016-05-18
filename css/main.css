@@ -374,6 +374,7 @@ input {
     padding: 1px 0;
     border-bottom: solid 1px #b0b0b0;
     font-weight: bold;
+    width: 100%;
 }
 
 input:placeholder-shown {
@@ -384,41 +385,8 @@ table {
     width: 100%;
 }
 
-/*/*Column 100%*/
-/*#address1, #address2, #email {
-    width: 100%;
-    float: left;
-    margin-bottom: 5px;
-    display: block;
-}*/
-
-/*Column 50%*/
-/*#firstName, #LastName, #firstNameCard, #lastNameCard, #phoneNumber {
-    width: 50%;
-    float: left;
-    margin-bottom: 5px;
-    display: inline-block;
-}
-*/
-/*Column 33.3%*/
-/*#city, #state, #zip, #cardNumber, #expire, #cvv {
-    width: 33.3%;
-    float: left;
-    margin-bottom: 5px;
-    display: inline-block;
-}*/
-
-/*Column 75%*/
-/*.75 {
-    width: 75%;
-    float: left;
-    margin-bottom: 5px;
-    display: inline-block;
-}*/
-
-/*Show label without JS?*/
-/*input:focus ~ label {}*/
-
+/* Column Styles */
+/*===========================================================================*/
 .col-full {
     width: 100%;
     float: left;
@@ -445,9 +413,12 @@ table {
 }
 
 
-.col-third:nth-of-type(-n+2) {
-    margin-right: 8%;
+.col-third {
+    margin-right: 6%;
+}
 
+.col-third:last-child {
+    margin-right: 0;
 }
 
 input:focus {
