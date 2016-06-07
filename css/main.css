@@ -375,6 +375,7 @@ input {
     border-bottom: solid 1px #b0b0b0;
     font-weight: bold;
     width: 100%;
+    margin-bottom: 5px;
 }
 
 input:placeholder-shown {
@@ -408,18 +409,20 @@ table {
 }
 
 .col-third {
-    width: 30%;
+    width: 28%;
     float: left;
+    margin-right: 8%;
 }
 
-
-.col-third {
-    margin-right: 6%;
-}
-
-.col-third:last-child {
+.last {
+    width: 28%;
+    float: right;
     margin-right: 0;
 }
+
+/*div .col-third:nth-of-type(3) {
+    margin-right: 0;
+}*/
 
 input:focus {
     outline: none;
