@@ -386,7 +386,7 @@ table {
     width: 100%;
 }
 
-/* Column Styles */
+/* Form Column Styles */
 /*===========================================================================*/
 .col-full {
     width: 100%;
@@ -475,6 +475,25 @@ input:focus {
 
 /*Review Form Styles*/
 /*===========================================================================*/
+.review-col-left {
+    width: 30%;
+    float: left;
+}
+
+.review-col-left div {
+    font-size: 11px;
+}
+
+.review-col-right {
+    width: 70%;
+    float: right;
+}
+
+.review-col-right p {
+    margin: 0;
+    font-size: 11px;
+}
+
 .total {
     font-weight: bold;
     font-size: 10px;
@@ -484,6 +503,38 @@ input:focus {
 h3 {
     font-size: 18px;
     margin: 0;
+}
+
+.result {
+    text-align: right;
+    margin: 0;
+    float: right;
+}
+
+#quantityLabel {
+    margin: 12px 0;
+}
+
+#shipAddressLabel {
+    margin-top: 14px;
+}
+
+#shipMethod {
+    margin: 10px 0;
+    width: 100%;
+}
+
+#shipMethodLabel {
+    margin-top: 42px;
+}
+
+#paymentLabel {
+    margin-top: 11px;
+}
+
+#quantity {
+    width: 30px;
+    margin: 12px 0;
 }
 
 /*Button Styles*/

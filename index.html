@@ -220,52 +220,57 @@
                             </div>
                         </div>
 
-                        <!-- Quantity input -->
-                        <!-- In JS convert user input to a number and multiply by 200 then display in sub / total -->
-                        <div class='col-third'>
-                            <!-- <label for='quantity'>Quantity</label> -->
-                            <p>Quantity</p>
-                            <input type='text' name='quantity' id='quantity' placeholder='1'>
+                        <!-- Labels -->
+                        <div class='review-col-left'>
+                            <div id='quantityLabel'>Quantity</div>
+                            <div id='shipAddressLabel'>Ship Address</div>
+                            <div id='shipMethodLabel'>Ship Method</div>
+                            <div id='paymentLabel'>Payment</div>
                         </div>
-                        <!-- Ship Address div class-->
-                        <div class='shipAddress'>
-                            <!-- in JS, display user input for first and last name from shipping fieldset-->
-                            <div class='col-third'>
+                        
+                        <!-- Quantity input -->
+                        <div class='review-col-right'>
+                            <input type='text' name='quantity' id='quantity' placeholder='1'>
+                            <!-- Ship Address div class-->
+                            <div class='shipAddress'>
                                 <p>First Last</p>
                                 <p>Address 1</p>
                                 <p>City State, Zip</p>
                             </div>
-                        </div>
-
-                        <!-- Ship method selection input -->
-                        <!-- <label for='shipMethod'>Shipping method</label> -->
-                        <p>Shipping Method</p>
-                        <select name='shipMethod' id='shipMethod'>
-                            <option value='standard'>Standard Shipping $5.00</option>
-                            <option value='premium'>Premium $10.00</option>
-                            <option value='express'>Express $20.00</option>
-                        </select>
-
-                        <!-- Payment -->
-                        <div class='col-third'>
-                            <p>Payment</p>
+                            <!-- Ship method selection input -->
+                            <select name='shipMethod' id='shipMethod'>
+                                <option value='standard'>Standard Shipping $5.00</option>
+                                <option value='premium'>Premium $10.00</option>
+                                <option value='express'>Express $20.00</option>
+                            </select>
+                            <!-- Payment -->
                             <p>Mastercard</p>
-                            <p>Ending xxxx0000</p>
-                        </div>
-                        <div class='col-third'>
+                            <div class='card result'>
+                                <p>Ending xxxx0000</p>
+                            </div>
+                            <!-- Results -->
                             <p>Sub total</p>
+                            <div class='subTotal result'>
+                                <p>$00.00</p>
+                            </div>
                             <p>Estimated tax</p>
+                            <div class='estimatedTax result'>
+                                <p>$00.00</p>
+                            </div>
                             <p>Shipping</p>
+                            <div class='shipping result'>
+                                <p>$00.00</p>
+                            </div>
                         </div>
-
-                        <!-- column -->
-
+                        
                         <hr>
 
                         <!-- Total -->
-                        <div class='total<'>
+                        <div class='review-col-right'>
                             <p>Total</p>
-                            <h3>$200.00</h3>
+                            <div class='total result'>
+                                <h3>$200.00</h3>
+                            </div>
                         </div>
                         <!-- Place Order -->
                         <!-- hide on page load, use JS to show button when both shipping and payment buttons clicked -->
